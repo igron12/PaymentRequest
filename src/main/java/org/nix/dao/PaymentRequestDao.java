@@ -1,6 +1,5 @@
 package org.nix.dao;
 
-import org.nix.RequestStatus;
 import org.nix.models.PaymentRequest;
 
 import java.io.Serializable;
@@ -20,7 +19,6 @@ public interface PaymentRequestDao extends Serializable {
     // U
     void updatePaymentRequest(int id, PaymentRequest request, int status);
     void updatePaymentRequest(int id, int status);
-    void updatePaymentRequest(int id, PaymentRequest request);
 
     // D
     void deletePaymentRequest(int id);

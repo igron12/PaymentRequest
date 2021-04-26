@@ -1,16 +1,9 @@
 package org.nix.models;
 
-import net.bytebuddy.implementation.bind.annotation.Default;
-import org.hibernate.validator.constraints.Length;
-import org.nix.RequestStatus;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Future;
-import javax.validation.constraints.FutureOrPresent;
-import javax.validation.constraints.NotEmpty;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;

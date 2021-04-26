@@ -57,13 +57,6 @@ public class PaymentRequestDaoImpl implements PaymentRequestDao {
     }
 
     @Override
-    public void updatePaymentRequest(int id, PaymentRequest request) {
-        jdbcTemplate.update("update requests set route = ?, date_time = ?, status = cast(? as e_status) where id = ?",
-                request.getRouteNr(), request.getDateAndTime(), request.getStatus(), id);
-    }
-
-
-    @Override
     public void deletePaymentRequest(int id) {
         jdbcTemplate.update("delete from requests where id = ?", id);
     }
