@@ -36,12 +36,12 @@ public class PaymentRequestDaoImpl implements PaymentRequestDao {
 
     @Override
     public List<PaymentRequest> getListOfPaymentRequests() {
-        return jdbcTemplate.query("SELECT * FROM requests", new PaymentRequestMapper());
+        return jdbcTemplate.query("SELECT * FROM requests order by id", new PaymentRequestMapper());
     }
 
     @Override
     public List<PaymentRequest> getListOfPaymentRequests(int status) {
-        return jdbcTemplate.query("SELECT * FROM requests where cast(status as varchar) = ?", new PaymentRequestMapper(), RequestStatus.values()[status].name());
+        return jdbcTemplate.query("SELECT * FROM requests where cast(status as varchar) = ? order by id", new PaymentRequestMapper(), RequestStatus.values()[status].name());
     }
 
     @Override

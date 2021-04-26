@@ -26,6 +26,7 @@ public class PaymentRequest {
     @Column(name = "date_time")
     private Date dateAndTime;
 
+
     private int status;
 
     public PaymentRequest(int routeNr, String dateAndTime) throws ParseException {

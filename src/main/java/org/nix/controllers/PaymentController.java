@@ -48,8 +48,8 @@ public class PaymentController {
 //     PATCH
 
     @PatchMapping("/{id}/setStatus")
-    public PaymentRequest updateStatus(@PathVariable("id") int id,
-                                 @RequestParam int status) {
+    public PaymentRequest update(@PathVariable("id") int id,
+                                 int status) {
         paymentService.updateRequest(id, status);
         return paymentService.getById(id);
     }
